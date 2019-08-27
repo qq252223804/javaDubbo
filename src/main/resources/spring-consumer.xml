@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+http://code.alibabatech.com/schema/dubbo ">
+
+    <!-- 当前应用名称，显示于注册中心 -->
+    <dubbo:application name="dubbo-consumer"/>
+
+    <!--    &lt;!&ndash; 服务注册中心(可定义多条)，不存在时不报错 &ndash;&gt;-->
+    <!--    <dubbo:registry address="zookeeper://139.186.18.169:2181?backup=139.186.18.169:3888" check="false"/>-->
+
+    <!-- http://dubbo.io/books/dubbo-user-book/references/xml/dubbo-consumer.html -->
+    <!-- 设置 dubbo:reference 的缺省配置: 负载均衡策略为(random, roundrobin, leastactive)，启动时不检查 -->
+    <dubbo:consumer loadbalance="roundrobin" check="false"/>
+
+    <!-- 服务接口及其 beanId、版本号(保证接口一致) -->
+<!--    <dubbo:reference id="ExampleService" interface="com.ifuel.example.manager.client.service.ExampleService"-->
+<!--                     url="dubbo://192.168.3.116:20880" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="PartnersService" interface="com.ifuel.cec.manager.client.service.PartnersService"-->
+<!--                     url="dubbo://192.168.3.57:20983" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="CouponService" interface="com.ifuel.coupon.manager.client.service.CouponService"-->
+<!--                     url="dubbo://192.168.3.142:20903" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="MemberCouponService" interface="com.ifuel.coupon.manager.client.service.MemberCouponService"-->
+<!--                     url="dubbo://192.168.3.142:20903" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="WalletRecordService" interface="com.ifuel.wallet.manager.client.service.WalletRecordService"-->
+<!--                     url="dubbo://192.168.3.142:20902" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="WalletService" interface="com.ifuel.wallet.manager.client.service.WalletService"-->
+<!--                     url="dubbo://192.168.3.142:20902" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="PaymentService" interface="com.ifuel.pay.manager.client.service.PaymentService"-->
+<!--                     url="dubbo://192.168.3.142:20991" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="ChannelService" interface="com.ifuel.pay.manager.client.service.ChannelService"-->
+<!--                     url="dubbo://192.168.3.142:20991" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+<!--    <dubbo:reference id="ChargeService" interface="com.ifuel.cec.manager.client.service.ChargeService"-->
+<!--                     url="dubbo://192.168.3.142:20983" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+<!--    <dubbo:reference id="OpenStationService" interface="com.ifuel.cec.manager.client.service.OpenStationService"-->
+<!--                     url="dubbo://192.168.3.142:20983" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+    <dubbo:reference id="ShopItemService" interface="com.ifuel.shop.manager.client.service.ShopItemService"
+                     url="dubbo://192.168.3.146:9103" lazy="true" check="false" version="1.0.0" timeout="20000"/>
+    <dubbo:reference id="ShopGoodsService" interface="com.ifuel.shop.manager.client.service.ShopGoodsService"
+                     url="dubbo://192.168.3.142:9103" lazy="true" check="false" version="1.0.0" timeout="20000"/>
+
+
+<!--    <dubbo:reference id="ChargingControlService"-->
+<!--                     interface="com.ifuel.stationGateway.client.service.ChargingControlService"-->
+<!--                     url="dubbo://192.168.3.146:9104" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+</beans>
