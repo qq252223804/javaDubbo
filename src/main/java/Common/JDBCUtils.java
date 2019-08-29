@@ -63,16 +63,14 @@ public class JDBCUtils {
 
 			// executeNonQuery("insert into T_IdNames(TypeName,Name,IsDeleted)
 			// values(?,?,0)", "test1", "name1");
-			// long id = executeInsert("insert into
-			// T_IdNames(TypeName,Name,IsDeleted) values(?,?,0)", "test1",
-			// "name1");
-			// System.out.println(id);
-			String  obj = (String) querySingle("SELECT operator_id FROM t_partners WHERE id=\"30\"");
-			System.out.println(obj);
-			ResultSet rs = executeQuery("SELECT * FROM t_partners WHERE id=\"30\"");
-			while(rs.next()) {
-				System.out.println(rs.getString("id")); }
-			JDBCUtils.closeAll(rs);
+			 long id = executeInsert("INSERT INTO `t_order_child` VALUES ('201908291014222351100', '32', '闲时', '200', '60', '160', '136', '320', '272', '1566987545000', '1566997545000', '0');");
+			 System.out.println(id);
+//			String  obj = (String) querySingle("SELECT operator_id FROM t_partners WHERE id=\"30\"");
+//			System.out.println(obj);
+//			ResultSet rs = executeQuery("SELECT * FROM t_partners WHERE id=\"30\"");
+//			while(rs.next()) {
+//				System.out.println(rs.getString("id")); }
+//			JDBCUtils.closeAll(rs);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

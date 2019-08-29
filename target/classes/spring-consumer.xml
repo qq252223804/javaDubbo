@@ -28,8 +28,8 @@ http://code.alibabatech.com/schema/dubbo ">
 <!--    <dubbo:reference id="CouponService" interface="com.ifuel.coupon.manager.client.service.CouponService"-->
 <!--                     url="dubbo://192.168.3.142:20903" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
 
-<!--    <dubbo:reference id="MemberCouponService" interface="com.ifuel.coupon.manager.client.service.MemberCouponService"-->
-<!--                     url="dubbo://192.168.3.142:20903" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+    <dubbo:reference id="MemberCouponService" interface="com.ifuel.coupon.manager.client.service.MemberCouponService"
+                     url="dubbo://192.168.3.142:20903" lazy="true" check="false" version="1.0.0" timeout="20000"/>
 
 <!--    <dubbo:reference id="WalletRecordService" interface="com.ifuel.wallet.manager.client.service.WalletRecordService"-->
 <!--                     url="dubbo://192.168.3.142:20902" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
@@ -49,12 +49,17 @@ http://code.alibabatech.com/schema/dubbo ">
 <!--                     url="dubbo://192.168.3.142:20983" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
 
     <dubbo:reference id="ShopItemService" interface="com.ifuel.shop.manager.client.service.ShopItemService"
-                     url="dubbo://192.168.3.146:9103" lazy="true" check="false" version="1.0.0" timeout="20000"/>
+                     url="dubbo://192.168.3.142:20880" lazy="true" check="false" version="1.0.0" timeout="20000"/>
     <dubbo:reference id="ShopGoodsService" interface="com.ifuel.shop.manager.client.service.ShopGoodsService"
-                     url="dubbo://192.168.3.142:9103" lazy="true" check="false" version="1.0.0" timeout="20000"/>
+                     url="dubbo://192.168.3.142:20880" lazy="true" check="false" version="1.0.0" timeout="20000"/>
 
 
-<!--    <dubbo:reference id="ChargingControlService"-->
-<!--                     interface="com.ifuel.stationGateway.client.service.ChargingControlService"-->
+<!--    <dubbo:reference id="ChargingControlService" interface="com.ifuel.stationGateway.client.service.ChargingControlService"-->
 <!--                     url="dubbo://192.168.3.146:9104" lazy="true" check="false" version="1.0.0" timeout="20000"/>-->
+
+    <dubbo:reference id="OrderService" interface="com.ifuel.order.manager.client.service.OrderService"
+                     url="dubbo://192.168.3.146:9106" lazy="true" check="false" version="1.0.0" timeout="20000"/>
+
+
+
 </beans>

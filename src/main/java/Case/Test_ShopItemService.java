@@ -34,7 +34,7 @@ public class Test_ShopItemService {
 	public void test2_createItem_NogondsId(){
 		dataResult2=shopItemService.createItem(999999,15654L,1);
 		String res= JSON.toJSONString(dataResult2);
-		Reporter.log(miaoshu.txt("5,0L,1",res));
+		Reporter.log(miaoshu.txt("999999,15654L,1",res));
 		System.out.println(res);
 		Assert.assertTrue(res.contains("\"code\":20201"));
 

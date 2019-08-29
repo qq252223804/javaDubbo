@@ -32,23 +32,22 @@
             <artifactId>dubbo</artifactId>
             <version>2.6.6</version>
         </dependency>
+
+        <!--测试的dubbo接口依赖-->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.15</version>
+            <groupId>com.66ifuel</groupId>
+            <artifactId>order-manager-client</artifactId>
+            <version>4.0.0-20190829.044711-31</version>
         </dependency>
         <dependency>
             <groupId>com.66ifuel</groupId>
             <artifactId>wallet-manager-client</artifactId>
             <version>4.0.0-RELEASE</version>
         </dependency>
-        <!--JDBCUtil引用jar包-->
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
         <dependency>
             <groupId>com.66ifuel</groupId>
-            <artifactId>order-manager-client</artifactId>
-            <version>4.0.0-20190822.085344-5</version>
-            <classifier>sources</classifier>
+            <artifactId>coupon-manager-client</artifactId>
+            <version>4.0.0-RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.66ifuel</groupId>
@@ -60,6 +59,22 @@
             <artifactId>shop-manager-client</artifactId>
             <version>4.0.0-RELEASE</version>
         </dependency>
+
+
+
+        <dependency>
+            <groupId>com.66ifuel</groupId>
+            <artifactId>dubboContextTool</artifactId>
+            <version>4.0.1-RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.15</version>
+        </dependency>
+
+        <!--JDBCUtil引用jar包-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>

@@ -9,7 +9,7 @@ public class OrderNo {
 		Random random = new Random();
 		SimpleDateFormat allTime = new SimpleDateFormat("YYYYMMddHHmmSS");
 		String subjectno = allTime.format(new Date())+random.nextInt(10);
-		System.out.println(subjectno+random.nextInt(10));
+//		System.out.println(subjectno+random.nextInt(10));
     	return subjectno+random.nextInt(10);
 
 	}

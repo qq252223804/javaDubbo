@@ -1,5 +1,16 @@
 package Report;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.testng.IReporter;
+import org.testng.IResultMap;
+import org.testng.ISuite;
+import org.testng.ISuiteResult;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.xml.XmlSuite;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,18 +30,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 
-import org.testng.IReporter;
-import org.testng.IResultMap;
-import org.testng.ISuite;
-import org.testng.ISuiteResult;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
-import org.testng.Reporter;
-import org.testng.xml.XmlSuite;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 public class ZTestReport implements IReporter {
 
 	private long currentTime = System.currentTimeMillis();
@@ -38,14 +37,14 @@ public class ZTestReport implements IReporter {
 	private Date date = new Date(currentTime);
 	private String reportdate = formatter.format(date);
 	// 指定生成报告的路径
-	File f1 =new File("C:\\Users\\p\\Desktop\\java66ifuel\\src\\main\\java\\Report");
+	File f1 =new File("C:\\Users\\p\\Desktop\\dubbo工程\\javadubbo\\src\\main\\java\\Report");
 	private String path = f1.getAbsolutePath()+"\\"+reportdate+".html";
 	//	找出html样式模板所在路径
 //	 定义生成测试报告的路径和文件名，为兼容Windows和Linux此处使用File.separator代替分隔符
 //	private String path = System.getProperty("user.dir")+File.separator+reportdate+".html";
 	// 找出html样式模板所在路径
 //	private String templatePath = System.getProperty("user.dir")+File.separator+ "template1";
-	File f2 =new File("C:\\Users\\p\\Desktop\\java66ifuel\\src\\main\\java\\Report");
+	File f2 =new File("C:\\Users\\p\\Desktop\\dubbo工程\\javadubbo\\src\\main\\java\\Report");
 	private String templatePath =f2.getAbsolutePath()+"\\template";
 	private int testsPass = 0;
 
